@@ -1,0 +1,66 @@
+/*************************** 
+CUERPO
+***************************/
+
+.cuerpoIndex{
+    h1, h2{
+        display: flex;
+        justify-content: center;
+    }
+    .h5, .h6{
+        text-align: justify;
+    }
+}
+
+
+.subtitulo{
+    display: flex;
+    background-color: $fondoMenu;
+    border: 2px solid $bordes;
+    border-radius: 1vw;
+    width: 90%;
+    padding-top: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: space-around;
+    h2 a{
+        font-size: 2rem;
+        font-weight: 800;
+        color: $botones;
+        img{
+            width: 60px;
+            filter: drop-shadow(3px 3px 6px $bordes);
+        }
+    }
+    h2 {
+        opacity: 0;
+        animation-name: aparecer;
+        animation-duration: 550ms;
+        animation-delay: 400ms;
+        animation-fill-mode: forwards;
+        color: $botones;
+    img{
+        width: 60px;
+        filter: drop-shadow(3px 3px 6px $bordes);
+        }
+    }
+}
+.subtitulo:hover a{
+    color: $bordes;
+    transition: 600ms;
+}
+
+.cont-photoshop{
+    div{
+        div{
+            img{
+                filter: grayscale(30%);
+            }
+            img:hover{
+                transform: scale(1.15);
+                filter: grayscale(0%) drop-shadow(3px 3px 6px $bordes);
+                transition: 500ms;
+            }
+        }
+    }
+}

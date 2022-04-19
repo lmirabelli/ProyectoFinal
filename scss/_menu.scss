@@ -1,0 +1,57 @@
+/*************************** 
+MENU 
+***************************/
+header{
+    width: 80vw;
+    padding-left: 10vw;
+    background-color: $fondoMenu;
+    border: 2px solid $bordes;
+    border-top: 0px;
+    border-radius: 0 0 3vw 3vw;
+    .col{
+        display: flex;
+        justify-content: center;
+        height: 60px;
+        min-width: 7vw;
+        img{
+            width: 60px;
+            filter: drop-shadow(3px 3px 6px $bordes);
+        }
+        a{
+            opacity: 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $fondo;
+            min-width: 103px;
+            margin: 10px 0 10px 0;
+            animation-name: posicionar;
+            animation-duration: 800ms;
+            animation-fill-mode: forwards;
+        }
+        #botonMenu1{
+            animation-delay: 400ms;
+        }
+        #botonMenu2{
+            animation-delay: 600ms;
+        }
+        #botonMenu3{
+            animation-delay: 800ms;
+        }
+        #botonMenu4{
+            animation-delay: 1000ms;
+        }
+        #botonMenu5{
+            animation-delay: 1200ms;
+        }
+    }
+    .col:hover a{
+        color: $bordes;
+        transition: 600ms;
+    }
+}
+header:hover{
+    img{
+        animation-name: giro;
+        animation-duration: 1800ms;
+    }
+}

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+// *******************
+// VARIABLES DE COLORES
+// *********************
+
+$fondo: #F2E9D8;
+$fondoMenu: #734136;
+$bordes: #080808;
+$botones: #D99771;
+$efecto1: #f2e9d8;
+
+/*******************
+REINICIO
+*********************/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+/*******************
+BODY COMPLETO
+*********************/
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    background-image: linear-gradient($fondo, $fondoMenu);
+    min-height: 100vh;
+}

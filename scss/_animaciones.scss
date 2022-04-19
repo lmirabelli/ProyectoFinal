@@ -1,0 +1,51 @@
+/***************************
+ANIMACIONES
+***************************/
+
+
+@keyframes posicionar{
+    0%  {margin-top: 0px;
+        opacity: 0%;
+        }
+    15% {margin-top: 4px;
+        opacity: 20%;
+        }
+    30% {margin-top: 8px;
+        opacity: 40%;
+        }
+    60% {margin-top: 10px;
+        opacity: 60%;
+        }
+    75% {margin-top: 6px;
+        opacity: 80%;
+        }
+    100% {margin-top: 3px;
+        opacity: 100%;
+        }
+}
+
+@keyframes aparecer{
+    0% {
+        opacity: 0%;
+        transform: scale(0);
+    }
+    80%{
+        opacity: 90%;
+    }
+    100%{
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes giro{
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+    50%{
+        transform: rotate(360deg) scale(1.8);
+    }
+    100%{
+        transform: rotate(720deg) scale(1);
+    }
+}
