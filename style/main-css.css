@@ -78,8 +78,76 @@ header:hover img {
 }
 
 /*************************** 
+NAVEGACION
+***************************/
+.navegacion {
+  opacity: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.1);
+  height: 4rem;
+  width: 25vw;
+  border-radius: 2rem;
+  left: calc(50% - 12.5vw);
+  bottom: 4rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 2;
+  animation-name: aparecer;
+  animation-duration: 700ms;
+  animation-delay: 1500ms;
+  animation-fill-mode: forwards;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
+}
+.navegacion img {
+  height: 2rem;
+  width: 2rem;
+  opacity: 25%;
+  filter: grayscale(100%);
+}
+.navegacion img:hover {
+  filter: grayscale(60%);
+  transform: scale(1.15);
+  opacity: 80%;
+  transition: 500ms;
+}
+
+/*************************** 
 CUERPO
 ***************************/
+.cuerpoIndex .cont-principal {
+  margin: auto;
+  margin-top: 20vh;
+  margin-bottom: 15vh;
+  padding: 40px 1.5rem;
+  width: 75vw;
+  min-height: 45vh;
+  border: 6px solid #734136;
+  border-radius: 3vw;
+  box-shadow: 3vh 3vh 5vh #734136;
+  animation-name: aparecer;
+  animation-duration: 850ms;
+}
+.cuerpoIndex .cont-principal h1, .cuerpoIndex .cont-principal h2 {
+  opacity: 0;
+  color: #734136;
+  font-weight: 800;
+  animation-name: aparecer;
+  animation-duration: 850ms;
+  animation-delay: 850ms;
+  animation-fill-mode: forwards;
+}
+.cuerpoIndex .cont-principal .h5, .cuerpoIndex .cont-principal .h6 {
+  opacity: 0;
+  margin-top: 2rem;
+  color: #734136;
+  font-weight: 600;
+  animation-name: aparecer;
+  animation-duration: 850ms;
+  animation-delay: 1200ms;
+  animation-fill-mode: forwards;
+}
 .cuerpoIndex h1, .cuerpoIndex h2 {
   display: flex;
   justify-content: center;
@@ -186,6 +254,46 @@ ANIMACIONES
   }
   100% {
     transform: rotate(720deg) scale(1);
+  }
+}
+@media (max-width: 768px) {
+  .navegacion {
+    width: 40vw;
+    left: calc(50% - 20vw);
+  }
+}
+@media (max-width: 600px) {
+  .navegacion {
+    width: 50vw;
+    left: calc(50% - 25vw);
+  }
+
+  .videos div iframe {
+    width: 90vw;
+  }
+}
+@media (max-width: 450px) {
+  header {
+    display: none;
+  }
+
+  .navegacion {
+    width: 70vw;
+    left: calc(50% - 35vw);
+    bottom: auto;
+    top: 2rem;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .navegacion img {
+    opacity: 45%;
+    filter: grayscale(60%);
+  }
+
+  .subtitulo h2 a {
+    font-size: 24px;
+  }
+  .subtitulo h2 img {
+    width: 35px;
   }
 }
 
