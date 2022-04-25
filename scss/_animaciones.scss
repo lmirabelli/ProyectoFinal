@@ -24,7 +24,9 @@ ANIMACIONES
         }
 }
 
+
 @keyframes aparecer{
+
     0% {
         opacity: 0%;
         transform: scale(0);
@@ -46,6 +48,6 @@ ANIMACIONES
         transform: rotate(360deg) scale(1.8);
     }
     100%{
-        transform: rotate(720deg) scale(1);
+        transform: rotate(720deg) scale(1) translateX(0px);
     }
 }

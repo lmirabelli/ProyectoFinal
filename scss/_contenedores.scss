@@ -1,8 +1,22 @@
 /*************************** 
 NAVEGACION
 ***************************/
+/*------
+MIXIN
+------*/
+
+@mixin anivalores ($val1,$val2,$val3) {
+    opacity: $val1;
+    animation-duration: $val2;
+    animation-delay: $val3;
+    
+}
+
+
+
+
 .navegacion{
-    opacity: 0;
+    @include anivalores(0,700ms ,1500ms );
     backdrop-filter: blur(10px);
     background: rgba($color: #000, $alpha: 0.1);
     height: 4rem;
@@ -16,8 +30,6 @@ NAVEGACION
     position: fixed;
     z-index: 2;
     animation-name: aparecer;
-    animation-duration: 700ms;
-    animation-delay: 1500ms;
     animation-fill-mode: forwards;
     box-shadow: 0.5rem 0.5rem 1rem rgba($color: #000000, $alpha: .6);
     img{
@@ -59,71 +71,76 @@ CUERPO
         animation-duration: 850ms;
 
         h1, h2{
-            opacity: 0;
+            @include anivalores(0,850ms ,850ms );
+            display: flex;
+            justify-content: center;
             color: $fondoMenu;
             font-weight: 800;
             animation-name: aparecer;
-            animation-duration: 850ms;
-            animation-delay: 850ms;
             animation-fill-mode: forwards;
         }
+
+        /*
+        ------------------
+        EXTEND
+        ------------------
+        */
+
         .h5, .h6{
-            opacity: 0;
-            margin-top: 2rem;
-            color: $fondoMenu;
+            @extend h1;
+            margin-top: 2rem;   
             font-weight: 600;
-            animation-name: aparecer;
-            animation-duration: 850ms;
             animation-delay: 1200ms;
-            animation-fill-mode: forwards;
+            text-align: justify;
         }
     }
-    h1, h2{
+
+}
+$subs:(
+    ps: #001132,
+    ae: #00005c,
+    ai: #390000,
+    pr: #00005f);
+
+@each $clave, $valor-color in $subs{
+    .subtitulo-#{$clave}{
         display: flex;
-        justify-content: center;
-    }
-    .h5, .h6{
-        text-align: justify;
-    }
-}
-
-
-
-.subtitulo{
-    display: flex;
-    background-color: $fondoMenu;
-    border: 2px solid $bordes;
-    border-radius: 1vw;
-    width: 90%;
-    padding-top: 5px;
-    margin-left: 5%;
-    margin-right: 5%;
-    justify-content: space-around;
-    h2 a{
-        font-size: 2rem;
-        font-weight: 800;
-        color: $botones;
-        img{
-            width: 60px;
-            filter: drop-shadow(3px 3px 6px $bordes);
+        background-color: $valor-color;
+        border: 2px solid $bordes;
+        border-radius: 1vw;
+        width: 90%;
+        padding-top: 5px;
+        margin-left: 5%;
+        margin-right: 5%;
+        justify-content: space-around;
+        h2 {
+            @include anivalores(0,550ms ,400ms );
+            animation-name: aparecer;
+            animation-fill-mode: forwards;
+            color: $botones;
+            img{
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                border-radius: 10px;
+                width: 60px;
+                filter: drop-shadow(3px 3px 6px $bordes);
+            }
+            a{
+                font-size: 2rem;
+                font-weight: 800;
+                color: $botones;
+                img{
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                    border-radius: 10px;
+                    width: 60px;
+                    filter: drop-shadow(3px 3px 6px $bordes);
+                }
+                &:hover{
+                    color: $bordes;
+                    transition: 600ms;
+                }
+            }
         }
     }
-    h2 {
-        opacity: 0;
-        animation-name: aparecer;
-        animation-duration: 550ms;
-        animation-delay: 400ms;
-        animation-fill-mode: forwards;
-        color: $botones;
-    img{
-        width: 60px;
-        filter: drop-shadow(3px 3px 6px $bordes);
-        }
-    }
-}
-.subtitulo:hover a{
-    color: $bordes;
-    transition: 600ms;
 }
 
 .cont-photoshop{

@@ -36,10 +36,18 @@ header .col {
   justify-content: center;
   height: 60px;
   min-width: 7vw;
+  /*
+  -------------------------
+  BUCLE
+  -------------------------
+  */
 }
 header .col img {
   width: 60px;
   filter: drop-shadow(3px 3px 6px #080808);
+  animation-name: giro;
+  animation-duration: 1800ms;
+  animation-delay: 300ms;
 }
 header .col a {
   opacity: 0;
@@ -72,16 +80,16 @@ header .col:hover a {
   transition: 600ms;
 }
 
-header:hover img {
-  animation-name: giro;
-  animation-duration: 1800ms;
-}
-
 /*************************** 
 NAVEGACION
 ***************************/
+/*------
+MIXIN
+------*/
 .navegacion {
   opacity: 0;
+  animation-duration: 700ms;
+  animation-delay: 1500ms;
   backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.1);
   height: 4rem;
@@ -95,8 +103,6 @@ NAVEGACION
   position: fixed;
   z-index: 2;
   animation-name: aparecer;
-  animation-duration: 700ms;
-  animation-delay: 1500ms;
   animation-fill-mode: forwards;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.6);
 }
@@ -128,37 +134,33 @@ CUERPO
   box-shadow: 3vh 3vh 5vh #734136;
   animation-name: aparecer;
   animation-duration: 850ms;
+  /*
+  ------------------
+  EXTEND
+  ------------------
+  */
 }
-.cuerpoIndex .cont-principal h1, .cuerpoIndex .cont-principal h2 {
+.cuerpoIndex .cont-principal h1, .cuerpoIndex .cont-principal .h5, .cuerpoIndex .cont-principal .h6, .cuerpoIndex .cont-principal h2 {
   opacity: 0;
+  animation-duration: 850ms;
+  animation-delay: 850ms;
+  display: flex;
+  justify-content: center;
   color: #734136;
   font-weight: 800;
   animation-name: aparecer;
-  animation-duration: 850ms;
-  animation-delay: 850ms;
   animation-fill-mode: forwards;
 }
 .cuerpoIndex .cont-principal .h5, .cuerpoIndex .cont-principal .h6 {
-  opacity: 0;
   margin-top: 2rem;
-  color: #734136;
   font-weight: 600;
-  animation-name: aparecer;
-  animation-duration: 850ms;
   animation-delay: 1200ms;
-  animation-fill-mode: forwards;
-}
-.cuerpoIndex h1, .cuerpoIndex h2 {
-  display: flex;
-  justify-content: center;
-}
-.cuerpoIndex .h5, .cuerpoIndex .h6 {
   text-align: justify;
 }
 
-.subtitulo {
+.subtitulo-ps {
   display: flex;
-  background-color: #734136;
+  background-color: #001132;
   border: 2px solid #080808;
   border-radius: 1vw;
   width: 90%;
@@ -167,29 +169,155 @@ CUERPO
   margin-right: 5%;
   justify-content: space-around;
 }
-.subtitulo h2 a {
+.subtitulo-ps h2 {
+  opacity: 0;
+  animation-duration: 550ms;
+  animation-delay: 400ms;
+  animation-name: aparecer;
+  animation-fill-mode: forwards;
+  color: #D99771;
+}
+.subtitulo-ps h2 img {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  width: 60px;
+  filter: drop-shadow(3px 3px 6px #080808);
+}
+.subtitulo-ps h2 a {
   font-size: 2rem;
   font-weight: 800;
   color: #D99771;
 }
-.subtitulo h2 a img {
+.subtitulo-ps h2 a img {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
   width: 60px;
   filter: drop-shadow(3px 3px 6px #080808);
 }
-.subtitulo h2 {
+.subtitulo-ps h2 a:hover {
+  color: #080808;
+  transition: 600ms;
+}
+
+.subtitulo-ae {
+  display: flex;
+  background-color: #00005c;
+  border: 2px solid #080808;
+  border-radius: 1vw;
+  width: 90%;
+  padding-top: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: space-around;
+}
+.subtitulo-ae h2 {
   opacity: 0;
-  animation-name: aparecer;
   animation-duration: 550ms;
   animation-delay: 400ms;
+  animation-name: aparecer;
   animation-fill-mode: forwards;
   color: #D99771;
 }
-.subtitulo h2 img {
+.subtitulo-ae h2 img {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
   width: 60px;
   filter: drop-shadow(3px 3px 6px #080808);
 }
+.subtitulo-ae h2 a {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #D99771;
+}
+.subtitulo-ae h2 a img {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  width: 60px;
+  filter: drop-shadow(3px 3px 6px #080808);
+}
+.subtitulo-ae h2 a:hover {
+  color: #080808;
+  transition: 600ms;
+}
 
-.subtitulo:hover a {
+.subtitulo-ai {
+  display: flex;
+  background-color: #390000;
+  border: 2px solid #080808;
+  border-radius: 1vw;
+  width: 90%;
+  padding-top: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: space-around;
+}
+.subtitulo-ai h2 {
+  opacity: 0;
+  animation-duration: 550ms;
+  animation-delay: 400ms;
+  animation-name: aparecer;
+  animation-fill-mode: forwards;
+  color: #D99771;
+}
+.subtitulo-ai h2 img {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  width: 60px;
+  filter: drop-shadow(3px 3px 6px #080808);
+}
+.subtitulo-ai h2 a {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #D99771;
+}
+.subtitulo-ai h2 a img {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  width: 60px;
+  filter: drop-shadow(3px 3px 6px #080808);
+}
+.subtitulo-ai h2 a:hover {
+  color: #080808;
+  transition: 600ms;
+}
+
+.subtitulo-pr {
+  display: flex;
+  background-color: #00005f;
+  border: 2px solid #080808;
+  border-radius: 1vw;
+  width: 90%;
+  padding-top: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: space-around;
+}
+.subtitulo-pr h2 {
+  opacity: 0;
+  animation-duration: 550ms;
+  animation-delay: 400ms;
+  animation-name: aparecer;
+  animation-fill-mode: forwards;
+  color: #D99771;
+}
+.subtitulo-pr h2 img {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  width: 60px;
+  filter: drop-shadow(3px 3px 6px #080808);
+}
+.subtitulo-pr h2 a {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #D99771;
+}
+.subtitulo-pr h2 a img {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  width: 60px;
+  filter: drop-shadow(3px 3px 6px #080808);
+}
+.subtitulo-pr h2 a:hover {
   color: #080808;
   transition: 600ms;
 }
@@ -253,7 +381,7 @@ ANIMACIONES
     transform: rotate(360deg) scale(1.8);
   }
   100% {
-    transform: rotate(720deg) scale(1);
+    transform: rotate(720deg) scale(1) translateX(0px);
   }
 }
 @media (max-width: 768px) {

@@ -16,6 +16,9 @@ header{
         img{
             width: 60px;
             filter: drop-shadow(3px 3px 6px $bordes);
+            animation-name: giro;
+            animation-duration: 1800ms;
+            animation-delay: 300ms;
         }
         a{
             opacity: 0;
@@ -28,30 +31,36 @@ header{
             animation-duration: 800ms;
             animation-fill-mode: forwards;
         }
-        #botonMenu1{
-            animation-delay: 400ms;
-        }
-        #botonMenu2{
-            animation-delay: 600ms;
-        }
-        #botonMenu3{
-            animation-delay: 800ms;
-        }
-        #botonMenu4{
-            animation-delay: 1000ms;
-        }
-        #botonMenu5{
-            animation-delay: 1200ms;
-        }
+/*
+-------------------------
+BUCLE
+-------------------------
+*/
+
+@for $i from 1 through 5 {
+    #botonMenu#{$i}{
+        animation-delay: ($i + 1) * 200ms;
+    }
+}
+
+        // #botonMenu1{
+        //     animation-delay: 400ms;
+        // }
+        // #botonMenu2{
+        //     animation-delay: 600ms;
+        // }
+        // #botonMenu3{
+        //     animation-delay: 800ms;
+        // }
+        // #botonMenu4{
+        //     animation-delay: 1000ms;
+        // }
+        // #botonMenu5{
+        //     animation-delay: 1200ms;
+        // }
     }
     .col:hover a{
         color: $bordes;
         transition: 600ms;
-    }
-}
-header:hover{
-    img{
-        animation-name: giro;
-        animation-duration: 1800ms;
     }
 }
