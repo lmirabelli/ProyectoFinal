@@ -16,8 +16,7 @@ BODY COMPLETO
 *********************/
 body {
   font-family: "Ubuntu", sans-serif;
-  background-image: linear-gradient(#F2E9D8, #734136);
-  min-height: 100vh;
+  background-image: linear-gradient(#F2E9D8, #734137);
 }
 
 /*************************** 
@@ -26,7 +25,7 @@ MENU
 header {
   width: 80vw;
   padding-left: 10vw;
-  background-color: #734136;
+  background-color: #734137;
   border: 2px solid #080808;
   border-top: 0px;
   border-radius: 0 0 3vw 3vw;
@@ -93,7 +92,7 @@ MIXIN
   backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.1);
   height: 4rem;
-  width: 25vw;
+  width: 28vw;
   border-radius: 2rem;
   left: calc(50% - 12.5vw);
   bottom: 4rem;
@@ -129,9 +128,9 @@ CUERPO
   padding: 40px 1.5rem;
   width: 75vw;
   min-height: 45vh;
-  border: 6px solid #734136;
+  border: 6px solid #734137;
   border-radius: 3vw;
-  box-shadow: 3vh 3vh 5vh #734136;
+  box-shadow: 3vh 3vh 5vh #734137;
   animation-name: aparecer;
   animation-duration: 850ms;
   /*
@@ -146,7 +145,7 @@ CUERPO
   animation-delay: 850ms;
   display: flex;
   justify-content: center;
-  color: #734136;
+  color: #734137;
   font-weight: 800;
   animation-name: aparecer;
   animation-fill-mode: forwards;
@@ -196,7 +195,7 @@ CUERPO
 }
 .subtitulo-ps h2 a:hover {
   color: #080808;
-  transition: 600ms;
+  transition: 650ms;
 }
 
 .subtitulo-ae {
@@ -237,7 +236,7 @@ CUERPO
 }
 .subtitulo-ae h2 a:hover {
   color: #080808;
-  transition: 600ms;
+  transition: 650ms;
 }
 
 .subtitulo-ai {
@@ -278,7 +277,7 @@ CUERPO
 }
 .subtitulo-ai h2 a:hover {
   color: #080808;
-  transition: 600ms;
+  transition: 650ms;
 }
 
 .subtitulo-pr {
@@ -319,7 +318,7 @@ CUERPO
 }
 .subtitulo-pr h2 a:hover {
   color: #080808;
-  transition: 600ms;
+  transition: 650ms;
 }
 
 .cont-photoshop div div img {
@@ -329,6 +328,18 @@ CUERPO
   transform: scale(1.15);
   filter: grayscale(0%) drop-shadow(3px 3px 6px #080808);
   transition: 500ms;
+}
+
+.videos {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin-left: 5%;
+  flex-wrap: wrap;
+}
+.videos div {
+  width: 40%;
+  margin-bottom: 35px;
 }
 
 /***************************
@@ -378,7 +389,7 @@ ANIMACIONES
     transform: rotate(0deg) scale(1);
   }
   50% {
-    transform: rotate(360deg) scale(1.8);
+    transform: rotate(360deg) scale(1.81);
   }
   100% {
     transform: rotate(720deg) scale(1) translateX(0px);
@@ -389,15 +400,23 @@ ANIMACIONES
     width: 40vw;
     left: calc(50% - 20vw);
   }
+
+  .videos {
+    width: 98%;
+    margin-left: 1%;
+  }
+  .videos div {
+    width: 40%;
+  }
+  .videos div iframe {
+    width: 98%;
+    margin-left: 1%;
+  }
 }
 @media (max-width: 600px) {
   .navegacion {
     width: 50vw;
     left: calc(50% - 25vw);
-  }
-
-  .videos div iframe {
-    width: 90vw;
   }
 }
 @media (max-width: 450px) {
@@ -414,7 +433,7 @@ ANIMACIONES
   }
   .navegacion img {
     opacity: 45%;
-    filter: grayscale(60%);
+    filter: grayscale(65%);
   }
 
   .subtitulo h2 a {

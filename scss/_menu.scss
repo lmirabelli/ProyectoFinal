@@ -42,22 +42,6 @@ BUCLE
         animation-delay: ($i + 1) * 200ms;
     }
 }
-
-        // #botonMenu1{
-        //     animation-delay: 400ms;
-        // }
-        // #botonMenu2{
-        //     animation-delay: 600ms;
-        // }
-        // #botonMenu3{
-        //     animation-delay: 800ms;
-        // }
-        // #botonMenu4{
-        //     animation-delay: 1000ms;
-        // }
-        // #botonMenu5{
-        //     animation-delay: 1200ms;
-        // }
     }
     .col:hover a{
         color: $bordes;

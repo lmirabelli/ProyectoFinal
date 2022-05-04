@@ -5,7 +5,7 @@
 // *********************
 
 $fondo: #F2E9D8;
-$fondoMenu: #734136;
+$fondoMenu: #734137;
 $bordes: #080808;
 $botones: #D99771;
 $fondo2: #999081;
@@ -29,5 +29,4 @@ BODY COMPLETO
 body{
     font-family: 'Ubuntu', sans-serif;
     background-image: linear-gradient($fondo, $fondoMenu);
-    min-height: 100vh;
 }

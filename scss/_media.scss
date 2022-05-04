@@ -3,18 +3,22 @@
         width: 40vw;
         left: calc(50% - 20vw);
     }
+    .videos{
+        width: 98%;
+        margin-left: 1%;
+        div{
+            width: 40%;
+            iframe{
+                width: 98%;
+                margin-left: 1%;
+            }
+        }
+    }
 }
 @media (max-width: 600px){
     .navegacion{
         width: 50vw;
         left: calc(50% - 25vw);
-    }
-    .videos{
-        div{
-            iframe{
-                width: 90vw;
-            }
-        }
     }
 }
 @media (max-width: 450px){
@@ -29,7 +33,7 @@
         background: rgba($color: #000, $alpha: 0.4);
         img{
             opacity: 45%;
-            filter: grayscale(60%);
+            filter: grayscale(65%);
         }
     }
     .subtitulo h2{
