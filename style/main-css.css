@@ -23,8 +23,7 @@ body {
 MENU 
 ***************************/
 header {
-  width: 80vw;
-  padding-left: 10vw;
+  width: 80%;
   background-color: #734137;
   border: 2px solid #080808;
   border-top: 0px;
