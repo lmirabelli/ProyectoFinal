@@ -147,12 +147,15 @@ $subs:(
     div{
         div{
             img{
-                filter: grayscale(30%);
+                filter: grayscale(30%) drop-shadow(8px 8px 10px #000);
+                transition: all 500ms ease-in-out;
             }
             img:hover{
-                transform: scale(1.15);
+                transform: scale(1.05);
                 filter: grayscale(0%) drop-shadow(3px 3px 6px $bordes);
-                transition: 500ms;
+            }
+            .prop-carrusel{
+                min-height: 320px;
             }
         }
     }
@@ -166,5 +169,12 @@ $subs:(
     div{
         width: 40%;
         margin-bottom: 35px;
+    }
+    .card-text{
+        font-weight: 700;
+    }
+    .card-title{
+        font-weight: 900;
+        text-shadow: 3px 2px 4px rgba($color: #000, $alpha: 0.7);
     }
 }

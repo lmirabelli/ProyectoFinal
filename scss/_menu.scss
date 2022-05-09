@@ -10,11 +10,12 @@ header{
     border-radius: 0 0 3vw 3vw;
     .col{
         display: flex;
+        text-align: center;
         justify-content: center;
-        height: 60px;
+        height: 35px;
         min-width: 7vw;
         img{
-            width: 60px;
+            width: 35px;
             filter: drop-shadow(3px 3px 6px $bordes);
             animation-name: giro;
             animation-duration: 1800ms;

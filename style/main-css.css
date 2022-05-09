@@ -32,8 +32,9 @@ header {
 }
 header .col {
   display: flex;
+  text-align: center;
   justify-content: center;
-  height: 60px;
+  height: 35px;
   min-width: 7vw;
   /*
   -------------------------
@@ -42,7 +43,7 @@ header .col {
   */
 }
 header .col img {
-  width: 60px;
+  width: 35px;
   filter: drop-shadow(3px 3px 6px #080808);
   animation-name: giro;
   animation-duration: 1800ms;
@@ -322,12 +323,15 @@ CUERPO
 }
 
 .cont-photoshop div div img {
-  filter: grayscale(30%);
+  filter: grayscale(30%) drop-shadow(8px 8px 10px #000);
+  transition: all 500ms ease-in-out;
 }
 .cont-photoshop div div img:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
   filter: grayscale(0%) drop-shadow(3px 3px 6px #080808);
-  transition: 500ms;
+}
+.cont-photoshop div div .prop-carrusel {
+  min-height: 320px;
 }
 
 .videos {
@@ -340,6 +344,13 @@ CUERPO
 .videos div {
   width: 40%;
   margin-bottom: 35px;
+}
+.videos .card-text {
+  font-weight: 700;
+}
+.videos .card-title {
+  font-weight: 900;
+  text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /***************************
@@ -403,20 +414,39 @@ ANIMACIONES
 
   .videos {
     width: 98%;
+    height: auto;
     margin-left: 1%;
   }
   .videos div {
-    width: 40%;
+    width: 100%;
+  }
+  .videos div h5, .videos div p {
+    text-align: center;
   }
   .videos div iframe {
-    width: 98%;
-    margin-left: 1%;
+    margin-left: calc(50% - 150px);
+    border: 3px solid #734137;
+  }
+
+  .cont-vid {
+    display: block;
+  }
+  .cont-vid div h5, .cont-vid div p {
+    text-align: center;
+  }
+  .cont-vid span {
+    display: none;
   }
 }
 @media (max-width: 600px) {
   .navegacion {
     width: 50vw;
     left: calc(50% - 25vw);
+  }
+
+  .subtitulo-ai h2 a img, .subtitulo-ps h2 a img, .subtitulo-pr h2 a img, .subtitulo-ae h2 a img {
+    height: 36px;
+    width: 36px;
   }
 }
 @media (max-width: 450px) {
@@ -436,11 +466,12 @@ ANIMACIONES
     filter: grayscale(65%);
   }
 
-  .subtitulo h2 a {
-    font-size: 24px;
+  .subtitulo-ai h2 a, .subtitulo-ps h2 a, .subtitulo-pr h2 a, .subtitulo-ae h2 a {
+    font-size: 18px;
   }
-  .subtitulo h2 img {
-    width: 35px;
+  .subtitulo-ai h2 img, .subtitulo-ps h2 img, .subtitulo-pr h2 img, .subtitulo-ae h2 img {
+    width: 18px;
+    height: 18px;
   }
 }
 
